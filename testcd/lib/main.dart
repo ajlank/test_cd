@@ -61,6 +61,9 @@ class _CounterAppState extends State<CounterApp> {
         child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(
+              'Hello world',
+            ),
             Text('Counter : $val'),
            SizedBox(
             height: 20,
