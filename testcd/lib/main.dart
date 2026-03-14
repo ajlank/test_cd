@@ -70,8 +70,9 @@ class _CounterAppState extends State<CounterApp> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _increaseVal,
-        child: const Icon(Icons.add),
+        
         tooltip: 'Increment',
+      child: const Icon(Icons.add),
       ),
     );
   }
