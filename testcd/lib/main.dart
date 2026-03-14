@@ -42,14 +42,14 @@ class CounterApp extends StatefulWidget {
 }
 
 class _CounterAppState extends State<CounterApp> {
-  int val=0;
-  
-  void _increaseVal(){
+  int val = 0;
+
+  void _increaseVal() {
     setState(() {
       val++;
     });
   }
-   
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,19 +59,19 @@ class _CounterAppState extends State<CounterApp> {
       ),
       body: Center(
         child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Hello world',
-            ),
-            Text('Counter : $val'),
-           SizedBox(
-            height: 20,
-           ),
-        
-           TextButton(onPressed: _increaseVal, child: const Text('Increase Counter'))
+            Text('Hello world'),
+           
+            Text('$val'),
+            SizedBox(height: 20),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _increaseVal,
+        child: const Icon(Icons.add),
+        tooltip: 'Increment',
       ),
     );
   }
