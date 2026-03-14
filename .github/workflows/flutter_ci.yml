@@ -19,6 +19,14 @@ jobs:
         run: flutter pub get
         working-directory: testcd
 
+      - name: Analyze code
+        run: flutter analyze
+        working-directory: testcd
+
+      - name: Run tests
+        run: flutter test
+        working-directory: testcd
+
       - name: Build APK
         run: flutter build apk --release
         working-directory: testcd
