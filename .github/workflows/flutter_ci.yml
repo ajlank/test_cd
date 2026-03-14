@@ -6,7 +6,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -18,12 +17,14 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
+        working-directory: testcd
 
       - name: Build APK
         run: flutter build apk --release
+        working-directory: testcd
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: flutter-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: testcd/build/app/outputs/flutter-apk/app-release.apk
